@@ -38,7 +38,11 @@ link_directories(${zmq_LIBRARY_PATH})
 #
 # "zmq.hpp" Support
 #
-link_directories(.)
+find_package(zmqhpp REQUIRED)
+include_directories(SYSTEM ${zmqhpp_INCLUDE})
+if(ZMQHPP_FOUND)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-deprecated-declarations")
+endif()
 
 #
 # Test in Sub Directories
