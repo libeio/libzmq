@@ -72,13 +72,13 @@ REQ-REP 模式是阻塞式的，即必须 client 先发送一条请求(REQuest)�
         socket.send(reply);
     }
 ```
-测试程序为 `client.cpp` 和 `server.cpp` 。
+测试程序为 `simpleclient.cpp` 和 `simpleserver.cpp` 。
 
 ----
 接下来要测试服务端在 `zmq::context_t` 中指定参数创建多个线程时的效率比较。
-测试程序为 `client_2.cpp` 和 `server_2.cpp` 。
+测试程序为 `req_rep_client.cpp` 和 `req_rep_server.cpp` 。
 
-在 4 核虚拟机上运行测试，对 `server_2.cpp` 中的 `zmq::context_t` 进行不同设置，测试结果如下:
+在 4 核虚拟机上运行测试，对 `req_rep_server.cpp` 中的 `zmq::context_t` 进行不同设置，测试结果如下:
 ```shell
     zmq::context_t  cost_time
     1               13667

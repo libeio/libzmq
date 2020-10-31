@@ -28,11 +28,5 @@
 - C++
 
 ## 测试目录说明
-- 1-first: REQ-REP 模式
-- 2-second: 进阶
-- 3-third: 高级请求-应答模式
-- 4-forth: 可靠的请求-应答模式
-- 5-fifth: 高级发布-订阅模式
-
-
-
+- [REQ-REP模式简易示例](1-first/README.md)
+- [REQ-REP模式效率测试](2-second/README.md)
